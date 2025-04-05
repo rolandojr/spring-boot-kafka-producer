@@ -11,8 +11,8 @@ public class KafkaConfig {
     @Value("${topic.name}")
     private String topicName;
 
-    @Bean
-    public NewTopic createtopic() {
-        return new NewTopic(topicName, 3, (short) 1);
-    }
+//    @Bean
+//    public NewTopic createtopic() {
+//        return new NewTopic(topicName, 3, (short) 1);
+//    }
 }

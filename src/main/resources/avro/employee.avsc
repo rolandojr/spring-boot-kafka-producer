@@ -12,6 +12,11 @@
       "type": "string"
     },
     {
+      "name": "middleName",
+      "type": ["string","null"],
+      "default": "null"
+    },
+    {
       "name": "lastName",
       "type": "string"
     },
@@ -21,8 +26,7 @@
     },
     {
       "name": "age",
-      "type": "string",
-      "default": ""
+      "type": ["null","string"]
     }
   ]
 }

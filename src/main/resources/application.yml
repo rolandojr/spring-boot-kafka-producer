@@ -2,16 +2,24 @@
 topic:
   name: java-topic
 
-
+client:
+  id: ccloud-java-client-da3e9a44-1db1-4eb8-a723-ad9290f064dd
 spring:
   application:
     name: spring-boot-kafka-producer
   kafka:
     producer:
-      bootstrap-servers: "127.0.0.1:9092"
+      bootstrap-servers: "pkc-56d1g.eastus.azure.confluent.cloud:9092"
       key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       value-serializer: "io.confluent.kafka.serializers.KafkaAvroSerializer"
       properties:
-        schema:
-          registry:
-            url: "http://127.0.0.1:8081"
+        security.protocol: SASL_SSL
+        sasl.mechanism: PLAIN
+        sasl.jaas.config: >
+          org.apache.kafka.common.security.plain.PlainLoginModule required
+          username="E3WKD2ZAAUG223UI"
+          password="T2OxJukwz4B4/Lrx/8UDxI5VD1XT6t9JFFWXri1E7OL5eVw17xT6z9ZHDJrpubxT";
+        schema.registry.url: "https://psrc-4x67e5q.eastus.azure.confluent.cloud"
+        basic.auth.credentials.source: USER_INFO
+        basic.auth.user.info: 7QLE6E5S6ENHTFZG:8OyRuq+16OtfqwQGj6Hys8TBmg6T0pUPooXnLkfSFQwSfkYp904hbLTmBjbxbHry
+

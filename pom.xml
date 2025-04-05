@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.example.producer</groupId>
 	<artifactId>spring-boot-kafka-producer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>spring-boot-kafka-producer</name>
 	<description>spring-boot-kafka-producer</description>
 	<url/>
